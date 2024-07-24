@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { CircleUser } from "lucide-react";
 
-export const UserMenu = () => (
+export const UserMenu = ({ onLogout }) => (
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <Button variant="secondary" size="icon" className="rounded-full">
@@ -23,7 +23,7 @@ export const UserMenu = () => (
       <DropdownMenuItem>Settings</DropdownMenuItem>
       <DropdownMenuItem>Support</DropdownMenuItem>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>Logout</DropdownMenuItem>
+      <DropdownMenuItem onClick={onLogout}>Logout</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 );
